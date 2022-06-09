@@ -29,7 +29,7 @@ class Contenedor {
         })
     }
     getRandomProduct() {
-        app.get('/randomProducts', (req, res) => {
+        app.get('/productoRandom', (req, res) => {
             try {
                 const randomProducts = data[(Math.random() * data.length) | 0]
                 res.status(200).json(randomProducts)
@@ -39,7 +39,7 @@ class Contenedor {
         })
     }
     getProductById() {
-        app.get('/product/:id', (req, res) => {
+        app.get('/producto/:id', (req, res) => {
             try {
                 const id = Number(req.params.id)
                 if (isNaN(id)) {
